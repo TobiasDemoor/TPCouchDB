@@ -16,6 +16,6 @@ services:
     ports:
       - '8081:80'
     volumes:
-      - ./client/build:/usr/share/nginx/html
+      - ./client:/usr/share/nginx/html
     depends_on:
       - couchserver
