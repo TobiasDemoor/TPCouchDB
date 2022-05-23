@@ -1,0 +1,21 @@
+version: '3'
+services:
+  couchserver:
+    image: couchdb
+    restart: always
+    ports:
+      - '5984:5984'
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=admin
+    volumes:
+      - ./dbdata:/opt/couchdb/data
+  
+  client-1:
+    image: nginx
+    ports:
+      - '8081:80'
+    volumes:
+      - ./client/build:/usr/share/nginx/html
+    depends_on:
+      - couchserver
