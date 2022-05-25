@@ -11,13 +11,15 @@
 <body>
     <h1 class="title">Add any document</h1>
     <form id="add" action="index.html">
-        <input type="text" name="document" placeholder="{&quot;key&quot; : &quot; value&quot; }" />
+        <textarea 
+            class="text_area" 
+            name="document" 
+            placeholder="{&#013;    key&quot; : &quot; value&quot;&#013;}"></textarea>
         <input type="submit" value="Add" class="button" />
     </form>
     <h1 class="title">Documents</h1>
     <div id="documents" class="scroll">
     </div>
-    <br/>
     <label>
         <h2 class="title">
             <input id="automatic" type="checkbox" class="checkbox" value="Crazy"/>

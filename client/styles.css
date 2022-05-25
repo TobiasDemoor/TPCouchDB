@@ -16,7 +16,6 @@ input.button {
     padding: 7px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     transition-duration: 0.4s;
     border-radius: 4px;
@@ -32,7 +31,7 @@ div.scroll {
     background-color: rgb(225, 225, 225);
     display: inline-block;
     border-radius: 5px;
-    border: 3px solid rgb(120, 120, 120);
+    border: 1px solid rgb(120, 120, 120);
     height: 300px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -41,4 +40,10 @@ div.scroll {
     font-family: monospace;
     line-height: 20pt;
     tab-size: 2;
+}
+.text_area {
+    width:300px;
+    height:60px;
+    display: inline-block;
+    vertical-align: middle;
 }
