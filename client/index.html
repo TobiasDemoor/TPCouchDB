@@ -5,19 +5,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
+<style type="text/css">
+    .title {
+        font-family: Arial;
+        color: rgb(52, 52, 52);
+    }
+    .text {
+        font-family: Arial;
+        color: rgb(52, 52, 52);
+    }
+    .checkbox {
+            width: 20px;
+            height: 20px;
+        }
+</style>
+
 <body>
-    <h1>Add any document</h1>
+    <h1 class="title">Add any document</h1>
     <form id="add" action="index.html">
         <input type="text" name="document" placeholder="{ key: value}" />
         <input type="submit" value="Add" />
     </form>
-    <br />
-    <h1>Documents</h1>
+    <br/>
+    <h1 class="title">Documents</h1>
     <div id="documents">
     </div>
-    <br />
-    <h1>Run in automatic mode</h1>
-    <input id="automatic" type="checkbox" value="Crazy" />
+    <br/>
+    <label>
+        <h2 class="title">
+            <input id="automatic" type="checkbox" class="checkbox" value="Crazy"/>
+            Run in automatic mode 
+        </h2>
+    </label>
     <script src="./index.js"></script>
 </body>
 
