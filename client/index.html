@@ -6,30 +6,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<style type="text/css">
-    .title {
-        font-family: Arial;
-        color: rgb(52, 52, 52);
-    }
-    .text {
-        font-family: Arial;
-        color: rgb(52, 52, 52);
-    }
-    .checkbox {
-        width: 20px;
-        height: 20px;
-    }
-</style>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
 
 <body>
     <h1 class="title">Add any document</h1>
     <form id="add" action="index.html">
         <input type="text" name="document" placeholder="{&quot;key&quot; : &quot; value&quot; }" />
-        <input type="submit" value="Add" />
+        <input type="submit" value="Add" class="button" />
     </form>
-    <br/>
     <h1 class="title">Documents</h1>
-    <div id="documents">
+    <div id="documents" class="scroll">
     </div>
     <br/>
     <label>

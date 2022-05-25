@@ -18,7 +18,7 @@ db.allDocs({ include_docs: true })
 .then((docs) => {
     console.log(docs)
     for (row of docs.rows) {
-        $("#documents").append(`<li class="text"> ${JSON.stringify(row.doc)} </li>`)
+        $("#documents").append(`<li>${JSON.stringify(row.doc)}</li>`)
     }
 });
 
