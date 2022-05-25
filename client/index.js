@@ -25,10 +25,16 @@ db.allDocs({ include_docs: true })
 let controlAutomatic = false;
 
 function automatic() {
-    console.log("automatic");
-    // TODO: do something with db
+    let person = {
+        fullname: chance.name(),
+        age: chance.age(),
+        phone: chance.phone(),
+        address: chance.address()
+    };
+    console.log(`New person added to database: ${person.fullname}`);
+    db.post(person);
     if (controlAutomatic) {
-        setTimeout(automatic, 1000);
+        setTimeout(automatic, 3000);
     }
 }
 
