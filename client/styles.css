@@ -33,6 +33,7 @@ div.scroll {
     border-radius: 5px;
     border: 1px solid rgb(120, 120, 120);
     height: 300px;
+    min-width: 500px;
     overflow-x: hidden;
     overflow-y: auto;
     color: rgb(52, 52, 52);
