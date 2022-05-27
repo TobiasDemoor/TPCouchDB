@@ -1,5 +1,5 @@
 const db = new PouchDB("couchdb");
-const remote = new PouchDB("http://admin:admin@172.19.0.2:5984/couchdb");
+const remote = new PouchDB("http://admin:admin@localhost:5984/couchdb");
 db.sync(remote, {
     live: true, // mantiene conexión abierta
     retry: true // si se cae la conexión vuelve a intentar conectarse

@@ -11,9 +11,6 @@ services:
     volumes:
       - ./dbdata:/opt/couchdb/data
       - ./couchdbconfig:/opt/couchdb/etc/local.d
-    networks:
-      couchdb:
-        ipv4_address: 172.19.0.2
   
   client-1:
     image: nginx
@@ -23,13 +20,3 @@ services:
       - ./client:/usr/share/nginx/html
     depends_on:
       - couchserver
-    networks:
-      - couchdb
-
-networks:
-  couchdb:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.19.0.0/16
