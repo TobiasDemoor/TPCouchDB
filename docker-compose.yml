@@ -20,3 +20,21 @@ services:
       - ./client:/usr/share/nginx/html
     depends_on:
       - couchserver
+  
+  client-2:
+    image: nginx
+    ports:
+      - '8082:80'
+    volumes:
+      - ./client:/usr/share/nginx/html
+    depends_on:
+      - couchserver
+  
+  client-3:
+    image: nginx
+    ports:
+      - '8083:80'
+    volumes:
+      - ./client:/usr/share/nginx/html
+    depends_on:
+      - couchserver
