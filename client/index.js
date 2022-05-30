@@ -37,8 +37,9 @@ function automatic() {
         phone: chance.phone(),
         address: chance.address()
     };
-    console.log(`New person added to database: ${person.fullname}`);
     db.post(person);
+    console.log(`New person added to database: ${person.fullname}`);
+    refreshDocuments();
     if (controlAutomatic) {
         setTimeout(automatic, 3000);
     }
