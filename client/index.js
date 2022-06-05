@@ -20,9 +20,11 @@ function refreshDocuments() {
     db.allDocs({ include_docs: true })
         .then((docs) => {
             console.log(docs)
+            $("#documents_count").text(`${docs.rows.length} documentos`)
             for (row of docs.rows) {
                 $("#documents").append(`<p style="white-space: pre-wrap;">${JSON.stringify(row.doc, null, 2)}</p>`)
             }
+
         });
 }
 
